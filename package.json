@@ -1,5 +1,5 @@
 {
-  "name": "example-bare",
+  "name": "simu-orbitales-molecuaire",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@solidjs/start": "^1.1.0",
+    "@types/three": "^0.183.1",
     "solid-js": "^1.9.5",
+    "three": "^0.183.1",
     "vinxi": "^0.5.7"
   },
   "engines": {
