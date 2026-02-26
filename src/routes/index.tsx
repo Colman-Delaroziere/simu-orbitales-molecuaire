@@ -352,72 +352,51 @@ const sceneOrbitalLobes: SceneSetup = ({ THREE, scene, camera }) => {
 export default function Home() {
   const sections: Section[] = [
     {
+      title: "Objectif",
+      blocks: [
+        {
+          type: "text",
+          body: `
+Prévoir le produit d'une réaction sous contrôle orbitalire grace à une simulation numérique.
+          `,
+        },
+        {
+          type: "text",
+          body: `
+Intéressons nous au pilier qui régie la réactivité.
+          `,
+        },
+      ],
+    },
+    {
       title: "Reactivité",
       blocks: [
         {
           type: "text",
           body: `
-Pour comprendre la reactivite des molecules, il faut decrire a la fois la geometrie et la repartition electronique.
-Pour comprendre la réactivité des molécules, il faut pouvoir séparer "" en niveaux de couches micro macro ...
+Pour comprendre la réactivité des molécules, On peut formuler un résonnement en différent domaines/couches micro macro.
           `,
         },
         {
           type: "scene",
           side: "left",
           body: `
-On peut 
-
-Intérésons nous au niveau microscopique. 
+La mécanique quantique est, à ce jour, le domaine le plus fondamental de l’analyse du réel. Elle permet de comprendre les propriétés électroniques des atomes et des molécules, et donc des phénomènes macroscopiques tels que la réactivité chimique ou les propriétés spectroscopiques des matériaux.
           `,
           setup: sceneCouchesNiveauxCompréhension,
-        },
-        {
-          type: "text",
-          body: `
-En pratique, la forme des orbitales change avec l'energie et l'environnement.
-Inserer une autre scene plus bas permet d'illustrer une transition sans casser la lecture.
-          `,
-        },
-        {
-          type: "text",
-          body: `
-La réactivité de moléculles entre-elles est déterminée par les intéractions microsccopiques des 
-Pour connaître la réactivité de mollécules entre eles, il f 
-Chaque molécule a des énergies d'éxitations associé au champ probabilisé de position des éléctrons.
-
-Pour connaître cette énergie et cet géométrie spatiale, il faut résoudre les équations de Schrödinger intemporelles et trouver les valeurs propres et fonctions propres de l'équation.
-    
-          `,
-        },
-        {
-          type: "scene",
-          side: "left",
-          body: `
-Ici la geometrie est differente: la rotation met en valeur les zones les plus exposees.
-Le bloc scene peut etre place a gauche ou a droite selon ce que tu veux raconter dans le paragraphe.
-          `,
-          setup: sceneTorusKnot,
         },
       ],
     },
     {
-      title: "Interactions orbitalaires",
+      title: "Mécanique quantique",
       blocks: [
         {
           type: "text",
           body: `
-Quand deux orbitales commencent a interagir, la distribution spatiale devient centrale.
-Cette section montre un exemple de scene encore differente, avec son propre setup Three.js.
+En mécanique quantique, on observe que chaque atome a des niveaux d'énergie d'éxcitation uniques et pour chacun d'entre eux, les éléctrons qui orbitent le noyaux suivent un champ de probilité spécifique.
+
+Pour connaître cette énergie et la géométrie spatiale formé par le champ probabilisé des électrons, il faut résoudre les équations de Schrödinger et trouver les valeurs propres et fonctions propres de l'équation.
           `,
-        },
-        {
-          type: "scene",
-          side: "right",
-          body: `
-Cette visualisation stylisee de lobes orbitalaires reste independante des autres scenes:
-materiaux, animation et eclairage sont definis localement dans son setup.
-          `,
-          setup: sceneOrbitalLobes,
         },
       ],
     },
