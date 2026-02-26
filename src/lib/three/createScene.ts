@@ -9,7 +9,7 @@ export type SceneController = {
   // resume() { ... },
 };
 
-export async function createSceneHost(
+export async function createScene(
   host: HTMLDivElement, // scene DOM element
   setup: (ctx: {
     THREE: typeof THREE_NS;

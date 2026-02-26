@@ -1,12 +1,12 @@
 import { onCleanup, onMount } from "solid-js";
-import { createSceneHost } from "~/lib/three/createSceneHost";
+import { createScene } from "~/lib/three/createScene";
 
 export default function SimuOptimisee() {
   let host!: HTMLDivElement;
   let controller: { dispose: () => void } | undefined;
 
   onMount(async () => {
-    controller = await createSceneHost(host, ({ THREE, scene, camera }) => {
+    controller = await createScene(host, ({ THREE, scene }) => {
       const geo = new THREE.SphereGeometry(1, 64, 64);
       const mat = new THREE.MeshStandardMaterial({
         metalness: 0.2,

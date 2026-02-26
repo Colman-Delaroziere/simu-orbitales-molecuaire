@@ -1,12 +1,12 @@
 import { onCleanup, onMount } from "solid-js";
-import { createSceneHost } from "~/lib/three/createSceneHost";
+import { createScene } from "~/lib/three/createScene";
 
 export default function SimuNaive() {
   let host!: HTMLDivElement;
   let controller: { dispose: () => void } | undefined;
 
   onMount(async () => {
-    controller = await createSceneHost(host, ({ THREE, scene }) => {
+    controller = await createScene(host, ({ THREE, scene }) => {
       const geo = new THREE.BoxGeometry(1, 1, 1);
       const mat = new THREE.MeshNormalMaterial();
       const cube = new THREE.Mesh(geo, mat);
